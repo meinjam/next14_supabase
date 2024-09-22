@@ -103,6 +103,7 @@ export const updateTask = async (prevState: updateTaskState | undefined, formDat
 
   if (data) {
     revalidatePath('/tasks');
+    revalidatePath(`/tasks/${id}`);
     redirect('/tasks');
   }
 };
